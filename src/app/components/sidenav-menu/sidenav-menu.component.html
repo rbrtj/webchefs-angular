@@ -1,0 +1,31 @@
+<div class="sidenav" [ngClass]="isExpanded ? 'isOpened' : null">
+  <button (click)="isExpanded = !isExpanded">
+    <img src="../../../assets/hamburger-menu.svg" class="icon" />
+  </button>
+  <div class="sidenav-content" *ngIf="isExpanded">
+    <div class="sidenav_date">
+      <span>Czwartek</span>
+      <p>23 Września</p>
+      <span>2020</span>
+    </div>
+    <div class="sidenav-buttons" *ngFor="let button of sidenavButtons">
+      <div class="sidenav-buttons__content">
+        <a href="#">
+          <div class="sidenav-buttons__content-data">
+            <img src="{{button.imagePath}}" class="icon-small" />
+            <span>{{button.name}}</span>
+          </div>
+         <div *ngIf="button.submenus" class="sidenav-buttons__content-submenu">
+          <ul *ngFor="let submenu of button.submenus">
+            <li>
+              <a href="#" class="sidenav-buttons__content-submenu__link">
+                {{submenu.name}}
+              </a>
+            </li>
+          </ul>
+         </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

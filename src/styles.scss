@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+*{
+  font-family: 'Rubik', sans-serif;
+}
+
+.icon{
+  width: 30px;
+  height: 30px;
+}
+
+.icon-small{
+  width: 24px;
+  height: 24px;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
