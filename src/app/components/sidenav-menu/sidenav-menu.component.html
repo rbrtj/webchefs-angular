@@ -1,7 +1,7 @@
+<button (click)="isExpanded = !isExpanded" class="sidenav-toggle-button">
+  <img src="../../../assets/hamburger-menu.svg" class="icon" />
+</button>
 <div class="sidenav" [ngClass]="isExpanded ? 'isOpened' : null">
-  <button (click)="isExpanded = !isExpanded">
-    <img src="../../../assets/hamburger-menu.svg" class="icon" />
-  </button>
   <div class="sidenav-content" *ngIf="isExpanded">
     <div class="sidenav_date">
       <span>Czwartek</span>
@@ -10,21 +10,21 @@
     </div>
     <div class="sidenav-buttons" *ngFor="let button of sidenavButtons">
       <div class="sidenav-buttons__content">
-        <a href="#">
           <div class="sidenav-buttons__content-data">
-            <img src="{{button.imagePath}}" class="icon-small" />
-            <span>{{button.name}}</span>
+            <a [routerLink]="button.route" routerLinkActive="active-route">
+              <img src="{{button.imagePath}}" class="icon-small" />
+              <span>{{button.name}}</span>
+            </a>
           </div>
          <div *ngIf="button.submenus" class="sidenav-buttons__content-submenu">
           <ul *ngFor="let submenu of button.submenus">
             <li>
-              <a href="#" class="sidenav-buttons__content-submenu__link">
+              <a [routerLink]="submenu.route" routerLinkActive="active-route" class="sidenav-buttons__content-submenu__link">
                 {{submenu.name}}
               </a>
             </li>
           </ul>
          </div>
-        </a>
       </div>
     </div>
   </div>
