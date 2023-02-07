@@ -1,0 +1,53 @@
+@import '../../../styles.scss';
+
+.navbar-top{
+  &-container{
+  width: calc(100% - 250px);
+  background-color: white;
+  border-bottom: 1px solid $color-gray-1;
+  border-left: 1px solid $color-gray-1;
+  position: absolute;
+  top: 0;
+  left: 250px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 4px 4px 10px rgba(0,0,0,0.08);
+}
+&_actions{
+  display: flex;
+}
+&_user{
+  display: flex;
+}
+}
+
+.navbar-tile {
+  &-medium{
+    border-right: 1px solid $color-gray-1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px 20px;
+    span:first-of-type{
+      color: $color-gray-4;
+      font-size: 11px;
+    }
+    font-size: 14px;
+  }
+  &-small{
+    border-left: 1px solid $color-gray-1;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  &-large{
+    border-left: 1px solid $color-gray-1;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    span:first-of-type{
+      color: $color-gray-4;
+      font-size: 11px;
+    }
+  }
+}

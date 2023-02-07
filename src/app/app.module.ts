@@ -10,6 +10,7 @@ import { UserEditComponent } from './pages/user-edit/user-edit.component';
 import { RolesAndPermissionsComponent } from './pages/roles-and-permissions/roles-and-permissions.component';
 import { SettingsComponent } from './pages/settings/settings.component';
 import { StatisticsComponent } from './pages/statistics/statistics.component';
+import { TopNavigationBarComponent } from './components/top-navigation-bar/top-navigation-bar.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { StatisticsComponent } from './pages/statistics/statistics.component';
     UserEditComponent,
     RolesAndPermissionsComponent,
     SettingsComponent,
-    StatisticsComponent
+    StatisticsComponent,
+    TopNavigationBarComponent
   ],
   imports: [
     BrowserModule,

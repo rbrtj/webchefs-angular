@@ -1,5 +1,7 @@
+@import '../../../styles.scss';
+
 .sidenav {
-  background-color: #ffff;
+  background-color: white;
   position: fixed;
   height: 100%;
   padding-top: 25px;
@@ -24,7 +26,7 @@
       font-size: 26px;
     }
     span {
-      color: #9ea1a8;
+      color: $color-gray-3;
       font-size: 14px;
     }
   }
@@ -35,7 +37,7 @@
     font-size: 12px;
     &:hover {
       transition: background-color 1s ease-out;
-      background-color: #F3F4F5;
+      background-color: $color-gray-2;
     }
     &__content {
       padding: 10px 25px;
@@ -45,18 +47,13 @@
           align-items: center;
           gap: 15px;
         }
-        .icon-small{
-          &:hover{
-            color: red;
-          }
-        }
       }
       &-submenu {
         &__link {
           display: flex;
           width: 100%;
           &:hover {
-            color: #5E92FC;
+            color: $color-blue-primary;
           }
         }
       }
@@ -65,7 +62,7 @@
 }
 
 .sidenav.isOpened {
-  border-right: 1px solid gray;
+  border-right: 1px solid $color-gray-1;
   .sidenav-content {
     display: block;
   }
